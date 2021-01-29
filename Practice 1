@@ -1,0 +1,18 @@
+# https://msdn.microsoft.com/zh-tw/library/ms187752.aspx
+# 資料類型 (Transact-SQL)
+ # --迴圈? 
+
+
+declare @a varchar 
+set @a = '08'
+
+
+select * from dbo.CHUNGYI_SPEED_TEST_kbps_07_T ;
+
+
+declare @a varchar(10) 
+declare @sql_script varchar(2000)
+set @a = '08'
+set @sql_script =  'select * from dbo.CHUNGYI_SPEED_TEST_kbps_' + @a + '_T'
+
+EXECUTE(@sql_script)
